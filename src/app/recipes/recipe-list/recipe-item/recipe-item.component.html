@@ -1,9 +1,11 @@
-<div class="list-group-item clearfix" (click)="onRecipeSelected()">
-    <div class="pull-left">
-        <h4 class="list-group-item-heading">{{recipe.name}}</h4>
-        <p class="list-group-item-item" appBasicHighlight>{{recipe.description}}</p>
+<a [routerLink]="['recipes', index]" routerLinkActive="active">
+    <div class="list-group-item clearfix" (click)="onRecipeSelected()">
+        <div class="pull-left">
+            <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+            <p class="list-group-item-item" appBasicHighlight>{{recipe.description}}</p>
+        </div>
+        <div class="pull-right">
+            <img [src]="recipe.imagePath" class="img-responsive" style="max-width:120px"/> 
+        </div>
     </div>
-    <div class="pull-right">
-        <img [src]="recipe.imagePath" class="img-responsive" style="max-width:120px"/> 
-    </div>
-</div>
+</a>

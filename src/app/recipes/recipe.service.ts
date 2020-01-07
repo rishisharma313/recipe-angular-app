@@ -1,6 +1,11 @@
 
+
 import { Recipe } from './recepie.modal';
-import { EventEmitter } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
+
+@Injectable({
+    providedIn:'root'
+})
 
 export class RecipeService{
 
@@ -13,6 +18,15 @@ export class RecipeService{
 
     getRecipes(){
         return this.recipes.slice();
+    }
+
+    getRecipeDetail(index:number){
+        return this.recipes[index];
+    }
+
+    setRecipes(recipes:Recipe[]){
+        this.recipes = recipes;
+        //this.recipesChanged.next(this.recipes.slice());
     }
 
 }

@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import {ShoppingListService} from './shopping-list.service';
 import {Ingredient} from '../shared/ingredient.model'
@@ -20,6 +21,9 @@ export class ShoppingListComponent implements OnInit {
 
   onIngredientAdded(){
     
+  }
+  onEditItem(i){
+    alert(i);
   }
 
 }
